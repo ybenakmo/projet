@@ -142,9 +142,6 @@ document.addEventListener("DOMContentLoaded", function(_e) {
 	    navigator.serviceWorker.register('sw.js');
 	};
 
-	self.addEventListener('install', (e) => {
-	    console.log('[Service Worker] Install');
-	});
     // invisible picture used to store the picture taken by the camera
     var picture = document.createElement("img");
     document.getElementById("btnScan").addEventListener("change", function (event) {
