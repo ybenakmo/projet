@@ -139,7 +139,7 @@ document.addEventListener("DOMContentLoaded", function(_e) {
     });
 
 	if('serviceWorker' in navigator) {
-	    navigator.serviceWorker.register('./Scanette/js/sw.js');
+	    navigator.serviceWorker.register('sw.js');
 	};
 
 	self.addEventListener('install', (e) => {
