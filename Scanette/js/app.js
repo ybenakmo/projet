@@ -137,6 +137,14 @@ document.addEventListener("DOMContentLoaded", function(_e) {
             alert("Echec de reconnaissance du code-barre");
         }
     });
+
+	if('serviceWorker' in navigator) {
+	    navigator.serviceWorker.register('./Scanette/js/sw.js');
+	};
+
+	self.addEventListener('install', (e) => {
+	    console.log('[Service Worker] Install');
+	});
     // invisible picture used to store the picture taken by the camera
     var picture = document.createElement("img");
     document.getElementById("btnScan").addEventListener("change", function (event) {
